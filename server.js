@@ -19,6 +19,14 @@ app.get('/shipmentTracking/:id', (req, res) => {
     taskController.getTasks(id).then(data => res.json(data));
 });
 
+app.post('shipmentTracking', (req, res) => {
+
+});
+
+app.patch('shipmentTracking/:id', (req, res) => {
+
+});
+
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
 });
