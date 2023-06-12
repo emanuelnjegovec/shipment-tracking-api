@@ -13,16 +13,10 @@ module.exports = (sequelize, DataTypes, Model) => {
           type: DataTypes.STRING
         }
       }, {
-        // Other model options go here
-        sequelize, // We need to pass the connection instance
-        modelName: 'orderreftype', // We need to choose the model name
+        sequelize,
+        modelName: 'orderreftype',
         tableName: 'orderreftype',
         timestamps: false
       });
-
-    /* Tasks.sync({ force: false }).then(() => {
-      console.log('synced to db');
-    }); */
-      
     return OrderRefType;
 }

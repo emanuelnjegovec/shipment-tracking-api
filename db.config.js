@@ -1,5 +1,5 @@
 const { Sequelize, Model, DataTypes } = require("sequelize");
-//const logger = require('../logger/api.logger');
+
 
 const connect = () => {
 
@@ -24,7 +24,7 @@ const connect = () => {
     const db = {};
     db.Sequelize = Sequelize;
     db.sequelize = sequelize;
-    db.tasks = require("./models/shipmentTracking.model")(sequelize, DataTypes, Model);
+    db.shipments = require("./models/shipmentTracking.model")(sequelize, DataTypes, Model);
 
     return db;
 

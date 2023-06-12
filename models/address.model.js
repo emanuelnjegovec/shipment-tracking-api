@@ -31,16 +31,11 @@ module.exports = (sequelize, DataTypes, Model) => {
           type: DataTypes.STRING(3),
         }
       }, {
-        // Other model options go here
-        sequelize, // We need to pass the connection instance
-        modelName: 'address', // We need to choose the model name
+        sequelize,
+        modelName: 'address',
         tableName: 'address',
         timestamps: false
       });
-
-    /* Tasks.sync({ force: false }).then(() => {
-      console.log('synced to db');
-    }); */
       
     return Address;
 }

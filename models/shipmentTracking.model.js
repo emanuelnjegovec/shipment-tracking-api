@@ -50,16 +50,10 @@ module.exports = (sequelize, DataTypes, Model) => {
           type: DataTypes.DATE
         }
       }, {
-        // Other model options go here
-        sequelize, // We need to pass the connection instance
-        modelName: 'shipmenttracking', // We need to choose the model name
+        sequelize,
+        modelName: 'shipmenttracking',
         tableName: 'shipmenttracking',
         timestamps: false
       });
-
-    /* Tasks.sync({ force: false }).then(() => {
-      console.log('synced to db');
-    }); */
-      
     return ShipmentTracking;
 }
